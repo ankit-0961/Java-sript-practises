@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h2>Increament and Decreament without using ++ and --</h2>
+
+  <p id="Number">0</p>
+  <button onclick="Increament()">increament </button>
+  <button onclick="Decreament()">decreament </button>
+  <script>
+    let num = 0;
+
+    function Increament() {
+      num = num + 1;
+      document.getElementById("Number").textContent = num
+    }
+
+
+    function Decreament() {
+      num = num - 1;
+      document.getElementById("Number").textContent = num
+    }
+
+  </script>
+</body>
+
+</html>

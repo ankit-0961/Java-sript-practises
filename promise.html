@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const promise = new Promise ((success,reject)=>{
+            const randomNum = Math.random();
+             console.log(randomNum);
+            if (randomNum>=0.5) {
+                success("you won");
+            } else {
+                reject("you lost");   
+            }
+        })
+        promise.then((data)=>{
+        console.log(data); 
+        }).catch((error)=>{
+         console.log(error);
+        })
+
+        
+        console.log(promise);
+        
+    </script>
+</body>
+</html>

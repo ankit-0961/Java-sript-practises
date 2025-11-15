@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button>Track me</button>
+    <script>
+
+        const btn =document.querySelector("button")
+      //  Geolocation-
+
+      function trackHandler() {
+        navigator.geolocation.getCurrentPosition((posData)=>{
+            console.log(posData);
+            setTimeout(() => {
+                console.log(posData);
+                
+            }, 2000);
+
+        }),((error)=>{
+            console.log(error);
+        })
+      }
+      btn.addEventListener("click",trackHandler);
+
+
+    </script>
+</body>
+</html>
